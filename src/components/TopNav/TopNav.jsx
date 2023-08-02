@@ -1,6 +1,5 @@
 import React from "react";
 import "./TopNav.scss";
-import SearchBar from "../SearchBar/SearchBar";
 import { Link } from "react-router-dom";
 
 const TopNav = ({ page, textColor, textColor2 }) => {
@@ -13,8 +12,6 @@ const TopNav = ({ page, textColor, textColor2 }) => {
     case "others":
       navStyle += " for-pages";
       break;
-    default:
-      navStyle = navStyle;
   }
 
   let navText = "navText";
@@ -25,8 +22,6 @@ const TopNav = ({ page, textColor, textColor2 }) => {
     case "black":
       navText += " for-pages black-text";
       break;
-    default:
-      navText = navText;
   }
 
   let navItems = "navItems";
@@ -37,8 +32,6 @@ const TopNav = ({ page, textColor, textColor2 }) => {
     case "black":
       navItems += " for-pages black-text item-black";
       break;
-    default:
-      navItems = navText;
   }
 
   return (
