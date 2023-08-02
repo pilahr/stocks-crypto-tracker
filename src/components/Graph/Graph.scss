@@ -1,0 +1,28 @@
+@use "../../styles/main" as *;
+@use "../../styles/variables" as *;
+
+.graph {
+  background-color: $color-white;
+  width: 1176px;
+  height: 731px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__header {
+    padding: 20px;
+    &--text {
+        font-family: "Inria Sans";
+        font-weight: 700;
+        font-size: 46px;
+        line-height: 55.15px;
+    }
+  }
+
+  &__graphical {
+    width: 1079px;
+    height: 540px;
+    border: 2px solid black;
+  }
+}

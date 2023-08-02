@@ -1,0 +1,23 @@
+@use "../../styles/main" as *;
+@use "../../styles/variables" as *;
+
+.stockDetails {
+  background-color: $color-white;
+  width: 395px;
+  height: 731px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__header {
+    &--text {
+      font-family: "Inter";
+      font-weight: 600;
+      font-size: 36px;
+      line-height: 43.57px;
+      text-align: center;
+      padding: 30px;
+    }
+  }
+}

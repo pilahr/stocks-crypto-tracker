@@ -3,6 +3,7 @@ import "./Crypto.scss";
 import TopNav from "../../components/TopNav/TopNav";
 import SearchBar from "../../components/SearchBar/SearchBar";
 import StocksBar from "../../components/StocksBar/StocksBar";
+import Main from "../../components/Main/Main";
 
 const Crypto = () => {
   return (
@@ -13,6 +14,9 @@ const Crypto = () => {
       </div>
       <div>
         <StocksBar />
+      </div>
+      <div>
+        <Main />
       </div>
     </div>
   );
