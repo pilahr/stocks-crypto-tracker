@@ -3,6 +3,7 @@ import "./Stock.scss";
 import TopNav from "../../components/TopNav/TopNav";
 import SearchBar from "../../components/SearchBar/SearchBar";
 import StocksBar from "../../components/StocksBar/StocksBar";
+import Main from "../../components/Main/Main";
 
 const Stock = () => {
   return (
@@ -14,6 +15,10 @@ const Stock = () => {
 
       <div>
         <StocksBar />
+      </div>
+
+      <div>
+        <Main />
       </div>
     </div>
   );

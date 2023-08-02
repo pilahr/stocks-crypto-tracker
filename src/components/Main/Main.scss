@@ -1,0 +1,13 @@
+@use "../../styles/main" as *;
+@use "../../styles/variables" as *;
+
+.main {
+  background-color: $color-background;
+  height: 100vh;
+  padding: 60px 0;
+
+  &__container {
+    display: flex;
+    justify-content: space-around;
+  }
+}
