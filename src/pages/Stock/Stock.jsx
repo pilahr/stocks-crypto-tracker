@@ -5,7 +5,7 @@ import SearchBar from "../../components/SearchBar/SearchBar";
 import StocksBar from "../../components/StocksBar/StocksBar";
 import Main from "../../components/Main/Main";
 
-const Stock = () => {
+const Stock = ({stockData}) => {
   return (
     <div className="stock-page">
       <div className="stock-page__topNav">
@@ -14,11 +14,11 @@ const Stock = () => {
       </div>
 
       <div>
-        <StocksBar />
+        <StocksBar stockData={stockData} />
       </div>
 
       <div>
-        <Main />
+        <Main stockData={stockData} />
       </div>
     </div>
   );

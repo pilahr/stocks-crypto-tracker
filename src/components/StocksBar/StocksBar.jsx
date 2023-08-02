@@ -2,7 +2,8 @@ import React from "react";
 import "./StocksBar.scss";
 import StockItem from "../StockItem/StockItem";
 
-const StocksBar = () => {
+const StocksBar = ({stockData}) => {
+
   return (
     <div className="stocks-bar">
       <StockItem />
