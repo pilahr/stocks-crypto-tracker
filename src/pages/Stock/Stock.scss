@@ -2,7 +2,9 @@
 @use "../../styles/variables" as *;
 
 .stock-page {
-    &__topNav {
-        display: flex;
-    }
+  height: 100vh;
+
+  &__topNav {
+    display: flex;
+  }
 }
