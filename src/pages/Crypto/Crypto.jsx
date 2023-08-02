@@ -7,7 +7,7 @@ const Crypto = () => {
   return (
     <div className="crypto-page">
       <div className="crypto-page__topNav">
-        <TopNav />
+        <TopNav page="others" textColor="black" textColor2="black" />
         <SearchBar />
       </div>
     </div>

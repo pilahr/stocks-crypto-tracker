@@ -7,7 +7,7 @@ const Stock = () => {
   return (
     <div className="stock-page">
       <div className="stock-page__topNav">
-        <TopNav />
+        <TopNav page="others" textColor="black" textColor2="black"/>
         <SearchBar />
       </div>
     </div>
