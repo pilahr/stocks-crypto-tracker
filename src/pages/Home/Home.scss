@@ -1,2 +1,33 @@
 @use "../../styles/main" as *;
 @use "../../styles/variables" as *;
+
+.homepage {
+  background-color: $color-dark-blue;
+  height: 100vh;
+
+  .homepage-wrap {
+    display: flex;
+    align-items: center;
+    height: 600px;
+  }
+
+  &__text {
+    padding: 10px;
+    margin: 20px 0 20px 20px;
+    
+    &--h1 {
+      color: $text-white;
+      font-size: 60px;
+    }
+  }
+
+  &__appPicture {
+    border-radius: 10px;
+    margin-right: 50px;
+
+    &--appPic {
+      width: 640px;
+      border-radius: 10px;
+    }
+  }
+}
