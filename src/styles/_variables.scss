@@ -11,12 +11,17 @@ $color-white-translucent: rgba(255, 255, 255, 0.5);
 $color-gray: rgb(178, 174, 174, 0.5);
 $color-dark-gray: rgba(86, 85, 85, 0.5);
 $color-black: black;
-$color-blue: rgb(98, 140, 239);
 $color-black-translucent: rgba(0, 0, 0, 0.8);
+
+$color-purple: #c898de;
+$color-light-blue: #96d9e8;
+$color-green: #b7df85;
+$color-yellow: #fdde72;
+$color-pink: #f0ace1;
+$color-red: #ed8e8e;
+$color-bright-green: #87e490;
+$color-dark-purple: #889af8;
 
 * {
   text-decoration: none;
 }
-
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
-$font-decor: "Dancing Script";

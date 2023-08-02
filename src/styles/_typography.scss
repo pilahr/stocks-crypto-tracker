@@ -1,10 +1,11 @@
 @use "./variables.scss" as *;
 
-// font "Ubuntu" , "Roboto"
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Ubuntu:ital,wght@0,700;1,400&display=swap");
+// font "Jaldi"
+
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Jaldi:wght@400;700&display=swap");
 
 * {
-  font-family: "Ubuntu", "Roboto", Arial, Helvetica, sans-serif;
+  font-family: "Jaldi", Arial, Helvetica, sans-serif;
   color: $text-black;
 }
 
