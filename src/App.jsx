@@ -6,6 +6,8 @@ import Stock from "./pages/Stock/Stock";
 import Crypto from "./pages/Crypto/Crypto";
 
 const App = () => {
+
+  
   return (
     <>
       <Router>

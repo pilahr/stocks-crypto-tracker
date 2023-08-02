@@ -1,0 +1,30 @@
+@use "../../styles/main" as *;
+@use "../../styles/variables" as *;
+
+.searchBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 392px;
+  height: 65px;
+  top: 20px;
+  left: 1313px;
+  border-radius: 12px;
+  border: none;
+  background-color: $color-search-bar-bg;
+
+  &__input {
+    width: 349px;
+    height: 46px;
+    // top: 29px;
+    // left: 1334px;
+    border-radius: 12px;
+    border: none;
+    background-color: $color-search-bar-bg;
+    font-family: "Inter";
+    font-weight: 100;
+    font-size: 24px;
+    line-height: 29.05;
+    padding-left: 5px;
+  }
+}

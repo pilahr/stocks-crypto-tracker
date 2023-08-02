@@ -1,8 +1,8 @@
 @use "./variables.scss" as *;
 
-// font "Jaldi"
+// font "Jaldi", "Inria Sans", "Inter"
 
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Jaldi:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Inria+Sans&family=Inter&family=Jaldi:wght@400;700&display=swap');
 
 * {
   font-family: "Jaldi", Arial, Helvetica, sans-serif;
@@ -39,7 +39,6 @@ h3 {
 
 p {
   font-size: 0.9rem;
-  font-family: "Roboto";
 }
 
 @media screen and (min-width: $tablet-breakpoint) {
