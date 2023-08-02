@@ -22,10 +22,6 @@ const TopNav = () => {
           </Link>
         </div>
       </div>
-
-      <div>
-        <SearchBar />
-      </div>
     </div>
   );
 };
