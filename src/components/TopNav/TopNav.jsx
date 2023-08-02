@@ -12,6 +12,8 @@ const TopNav = ({ page, textColor, textColor2 }) => {
     case "others":
       navStyle += " for-pages";
       break;
+    default:
+      navStyle = "";
   }
 
   let navText = "navText";
@@ -22,6 +24,8 @@ const TopNav = ({ page, textColor, textColor2 }) => {
     case "black":
       navText += " for-pages black-text";
       break;
+    default:
+      navText = "";
   }
 
   let navItems = "navItems";
@@ -32,6 +36,8 @@ const TopNav = ({ page, textColor, textColor2 }) => {
     case "black":
       navItems += " for-pages black-text item-black";
       break;
+    default:
+      navItems = "";
   }
 
   return (
