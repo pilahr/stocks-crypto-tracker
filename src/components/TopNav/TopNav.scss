@@ -1,0 +1,47 @@
+@use "../../styles/main" as *;
+@use "../../styles/variables" as *;
+
+.topNav {
+  width: 100vw;
+  height: 103px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__nav-items {
+    display: flex;
+    align-items: center;
+
+    &--app-name {
+      .app-name {
+        font-weight: 400;
+        font-size: 42px;
+        text-align: center;
+        width: 205px;
+        height: 85px;
+      }
+
+      .app-name:hover {
+        cursor: pointer;
+      }
+    }
+
+    &--options {
+      display: flex;
+      gap: 40px;
+
+      .text {
+        font-size: 22px;
+      }
+
+      .text:hover {
+        text-decoration: underline;
+        cursor: pointer;
+        border: 2px solid $color-gray;
+        border-bottom: none;
+        border-radius: 5px;
+        padding: 0 20px;
+      }
+    }
+  }
+}
