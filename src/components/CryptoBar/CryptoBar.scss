@@ -1,12 +1,12 @@
 @use "../../styles/main" as *;
 @use "../../styles/variables" as *;
 
-.crypto-page {
-
-  &__topNav {
+.crypto-bar {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    overflow-x: scroll;
+    gap: 30px;
+    padding: 20px;
+    height: 126px;
+    width: 100%;
     background-color: $color-dark-blue;
-  }
 }

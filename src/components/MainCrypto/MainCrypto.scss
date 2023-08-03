@@ -1,0 +1,14 @@
+@use "../../styles/main" as *;
+@use "../../styles/variables" as *;
+
+.mainCrypto {
+  height: 100vh;
+  padding: 60px 0;
+  background-color: $color-dark-blue-translucent;
+  height: 100vh;
+
+  &__container {
+    display: flex;
+    justify-content: space-around;
+  }
+}

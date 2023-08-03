@@ -6,11 +6,11 @@ const TopNav = ({ page, textColor, textColor2 }) => {
   let navStyle = "topNav";
 
   switch (page) {
-    case "homepage":
+    case "blue":
       navStyle += " for-homepage";
       break;
-    case "others":
-      navStyle += " for-pages";
+    case "stock":
+      navStyle += " for-stock-page";
       break;
     default:
       navStyle = "";

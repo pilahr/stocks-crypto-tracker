@@ -10,12 +10,10 @@ const App = () => {
 
   const [stockData, setStockData] = useState({});
 
-
   const getStockData = async () => {
     try {
-      let url = `https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY`;
-
-      url += `&symbol=IBM&interval=5min&outputsize=full&datatype=json&apikey=${apiKey}`;
+      let url = `https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY_ADJUSTED&symbol=IBM&apikey=${apiKey}`;
+      //let url = `https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=IBM&interval=5min&apikey=${apiKey}`;
 
       const res = await fetch(url);
       if (!res.ok) {
@@ -31,11 +29,7 @@ const App = () => {
 
   useEffect(() => {
     getStockData();
-  });
-
-  // console.log(stockData);
-  // console.log(stockData["Meta Data"]);
-
+  },[]);
 
   return (
     <>
