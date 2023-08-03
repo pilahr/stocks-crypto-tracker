@@ -14,7 +14,7 @@ const Stock = ({ stockData }) => {
     if (stockData["Weekly Adjusted Time Series"]) {
       Object.entries(stockData["Weekly Adjusted Time Series"]).map(
         ([key, value]) => {
-          formattedData.push({
+          return formattedData.push({
             x: key,
             y: [
               value["1. open"],
@@ -59,7 +59,7 @@ const Stock = ({ stockData }) => {
     if (stockData["Weekly Adjusted Time Series"]) {
       Object.entries(stockData["Weekly Adjusted Time Series"]).map(
         ([key, value]) => {
-          formattedData.push({
+          return formattedData.push({
             x: new Date(key).getTime(),
             y: [
               value["1. open"],

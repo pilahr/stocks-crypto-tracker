@@ -29,7 +29,7 @@ const App = () => {
 
   useEffect(() => {
     getStockData();
-  },[]);
+  });
 
   return (
     <>
