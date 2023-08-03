@@ -9,6 +9,7 @@
     display: flex;
     align-items: center;
     height: 600px;
+    border-top: 1px solid $color-white-translucent;
   }
 
   &__text {

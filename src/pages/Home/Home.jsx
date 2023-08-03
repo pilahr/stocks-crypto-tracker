@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <div className="homepage">
       <div>
-        <TopNav page="homepage" textColor="white" textColor2="white" />
+        <TopNav page="blue" textColor="white" textColor2="white" />
       </div>
       <div className="homepage-wrap">
         <div className="homepage__text">

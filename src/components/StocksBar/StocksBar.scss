@@ -2,11 +2,11 @@
 @use "../../styles/variables" as *;
 
 .stocks-bar {
-    display: flex;
-    overflow-x: scroll;
-    gap: 30px;
-    padding: 20px;
-    height: 126px;
-    width: 100%;
-    background-color: $color-white;
+  display: flex;
+  overflow-x: scroll;
+  gap: 30px;
+  padding: 20px;
+  height: 126px;
+  width: 100%;
+  background-color: $color-white;
 }

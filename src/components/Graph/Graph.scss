@@ -2,7 +2,6 @@
 @use "../../styles/variables" as *;
 
 .graph {
-  background-color: $color-white;
   width: 1176px;
   height: 731px;
   border-radius: 12px;
@@ -13,16 +12,28 @@
   &__header {
     padding: 20px;
     &--text {
-        font-family: "Inria Sans";
-        font-weight: 700;
-        font-size: 46px;
-        line-height: 55.15px;
+      font-family: "Inria Sans";
+      font-weight: 700;
+      font-size: 46px;
+      line-height: 55.15px;
     }
   }
 
   &__graphical {
     width: 1079px;
     height: 540px;
-    border: 2px solid black;
+    border: 2px solid gray;
   }
+}
+
+.dark {
+  background-color: $color-dark-blue;
+}
+
+.light {
+  background-color: $color-white;
+}
+
+.white-text {
+  color: $text-white;
 }

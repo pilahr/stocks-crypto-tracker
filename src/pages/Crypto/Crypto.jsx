@@ -2,21 +2,21 @@ import React from "react";
 import "./Crypto.scss";
 import TopNav from "../../components/TopNav/TopNav";
 import SearchBar from "../../components/SearchBar/SearchBar";
-import StocksBar from "../../components/StocksBar/StocksBar";
-import Main from "../../components/Main/Main";
+import CryptoBar from "../../components/CryptoBar/CryptoBar";
+import MainCrypto from "../../components/MainCrypto/MainCrypto";
 
 const Crypto = () => {
   return (
     <div className="crypto-page">
       <div className="crypto-page__topNav">
-        <TopNav page="others" textColor="black" textColor2="black" />
+        <TopNav page="blue" textColor="white" textColor2="white" />
         <SearchBar />
       </div>
-      <div>
-        <StocksBar />
+      <div className="crypto-page__bar">
+        <CryptoBar />
       </div>
       <div>
-        <Main />
+        <MainCrypto />
       </div>
     </div>
   );
