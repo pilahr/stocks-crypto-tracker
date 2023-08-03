@@ -27,9 +27,9 @@ const App = () => {
     }
   };
 
-  useEffect(() => {
-    getStockData();
-  });
+  // useEffect(() => {
+  //   getStockData();
+  // });
 
   return (
     <>
