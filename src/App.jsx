@@ -63,7 +63,8 @@ const App = () => {
   useEffect(() => {
     getStockData(companySymbolData);
     getCryptoData(CryptoSymbol);
-  }, [companySymbolData, CryptoSymbol]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   // useEffect(() => {
   //   getCryptoData(CryptoSymbol);
