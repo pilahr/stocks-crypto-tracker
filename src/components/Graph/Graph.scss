@@ -10,7 +10,7 @@
   align-items: center;
 
   &__header {
-    padding: 20px;
+    padding: 10px;
     &--text {
       font-family: "Inria Sans";
       font-weight: 700;
@@ -22,7 +22,6 @@
   &__graphical {
     width: 1079px;
     height: 540px;
-    border: 2px solid gray;
   }
 }
 
@@ -37,3 +36,4 @@
 .white-text {
   color: $text-white;
 }
+

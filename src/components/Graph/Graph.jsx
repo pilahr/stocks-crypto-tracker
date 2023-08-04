@@ -9,7 +9,6 @@ const Graph = ({
   seriesDataForGraph,
   graphOption,
 }) => {
-
   let backgroundStyle = "graph";
 
   switch (graphBackground) {
@@ -45,11 +44,11 @@ const Graph = ({
         <ReactApexChart
           series={[
             {
-              data: seriesDataForGraph,
+              data: seriesDataForGraph
             },
           ]}
           options={graphOption}
-          type="area"
+          type="candlestick"
         />
       </div>
     </div>
