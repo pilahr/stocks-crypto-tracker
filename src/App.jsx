@@ -62,11 +62,12 @@ const App = () => {
 
   useEffect(() => {
     getStockData(companySymbolData);
-  }, [companySymbolData]);
-
-  useEffect(() => {
     getCryptoData(CryptoSymbol);
-  }, [CryptoSymbol]);
+  }, [companySymbolData, CryptoSymbol]);
+
+  // useEffect(() => {
+  //   getCryptoData(CryptoSymbol);
+  // }, [CryptoSymbol]);
 
   return (
     <>

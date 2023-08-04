@@ -49,6 +49,7 @@ const StockItem = ({
 
   // useEffect(() => {
   //   getStockData();
+  // eslint-disable-next-line react-hooks/exhaustive-deps  //THIS HAS TO BE A COMMENT
   // }, []);
 
   // const getOpenPrice = (stockData) => {
