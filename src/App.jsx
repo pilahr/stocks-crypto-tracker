@@ -11,10 +11,10 @@ const App = () => {
   const apiKey = process.env.REACT_APP_STOCK_MARKET_API_KEY;
 
   const [stockData, setStockData] = useState({});
-  const [companySymbolData, setCompanySymbolData] = useState("IBM");
+  // const [companySymbolData, setCompanySymbolData] = useState("IBM");
 
   const [cryptoData, setCryptoData] = useState({});
-  const [CryptoSymbol, setCryptoSymbol] = useState("BTC");
+  // const [CryptoSymbol, setCryptoSymbol] = useState("BTC");
 
   const getStockData = async (symbolResult) => {
     try {
