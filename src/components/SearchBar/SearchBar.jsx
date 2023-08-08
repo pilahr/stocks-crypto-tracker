@@ -3,7 +3,7 @@ import "./SearchBar.scss";
 
 const SearchBar = ({ handleSymbolInputChange, searchTerm }) => {
 
-  console.log("SearchTerm from searchBar: "+ searchTerm);
+
   return (
     <div className="searchBar">
       <input

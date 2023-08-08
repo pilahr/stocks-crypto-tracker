@@ -11,6 +11,7 @@ const Stock = ({
 
 }) => {
 
+
   // Taking input from SearchBar
   const [searchTerm, setSearchTerm] = useState("");
 
@@ -24,8 +25,6 @@ const Stock = ({
     setSearchTerm(event.target.value.toLowerCase());
     setCompanySymbol(searchTerm);
   };
-
-  console.log("search term : " + searchTerm);
 
 
   // Stock Data
