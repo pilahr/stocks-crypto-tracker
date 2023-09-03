@@ -1,65 +1,7 @@
 import React from "react";
 import "./StockItem.scss";
 
-const StockItem = ({
-  element,
-  companySymbol,
-  // company,
-  open,
-}) => {
-  // const apiKey = process.env.REACT_APP_STOCK_MARKET_API_KEY;
-
-  // const [stockData, setStockData] = useState({});
-
-  // const getStockData = async () => {
-  //   try {
-  //     let url = `https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY_ADJUSTED&symbol=`;
-
-  //     switch (company) {
-  //       case "amzn":
-  //         url += `amzn&apikey=${apiKey}`;
-  //         break;
-  //       case "aapl":
-  //         url += `aapl&apikey=${apiKey}`;
-  //         break;
-  //       case "googl":
-  //         url += `googl&apikey=${apiKey}`;
-  //         break;
-  //       case "shop":
-  //         url += `shop&apikey=${apiKey}`;
-  //         break;
-  //       default:
-  //         url += `ibm&apikey=${apiKey}`;
-  //         break;
-  //     }
-  //     console.log(url);
-
-  //     const res = await fetch(url);
-  //     if (!res.ok) {
-  //       throw new Error("Sorry something went wrong!");
-  //     }
-
-  //     const data = await res.json();
-
-  //     setStockData(data);
-  //   } catch (e) {
-  //     alert(e.message);
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   getStockData();
-  // }, []);
-
-  // const getOpenPrice = (stockData) => {
-  //   const formattedData = [];
-  //   Object.values(stockData["Weekly Adjusted Time Series"]).map((value) =>
-  //     formattedData.push(value["1. open"])
-  //   );
-  //   return formattedData[0];
-  // };
-  // const open = getOpenPrice(stockData);
-
+const StockItem = ({ element, companySymbol, open }) => {
   let itemColor = "stockItem";
 
   switch (element) {

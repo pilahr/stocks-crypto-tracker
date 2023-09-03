@@ -69,8 +69,7 @@ const App = () => {
             element={
               <Stock
                 stockData={stockData}
-                setCompanySymbol={setCompanySymbolData}////
-                // companySymbolData={companySymbolData}
+                setCompanySymbol={setCompanySymbolData}
               />
             }
           />
@@ -79,8 +78,7 @@ const App = () => {
             element={
               <Crypto
                 cryptoData={cryptoData}
-                // CryptoSymbol={CryptoSymbol}
-                setCryptoSymbol={setCryptoSymbol}////
+                setCryptoSymbol={setCryptoSymbol}
               />
             }
           />

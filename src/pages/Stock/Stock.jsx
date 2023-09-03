@@ -5,13 +5,7 @@ import SearchBar from "../../components/SearchBar/SearchBar";
 import StocksBar from "../../components/StocksBar/StocksBar";
 import Main from "../../components/Main/Main";
 
-const Stock = ({
-  stockData,
-  setCompanySymbol,
-
-}) => {
-
-
+const Stock = ({ stockData, setCompanySymbol }) => {
   // Taking input from SearchBar
   const [searchTerm, setSearchTerm] = useState("");
 
@@ -25,7 +19,6 @@ const Stock = ({
     setSearchTerm(event.target.value.toLowerCase());
     setCompanySymbol(searchTerm);
   };
-
 
   // Stock Data
   const formattedStockData = (stockData) => {
@@ -117,10 +110,7 @@ const Stock = ({
       </div>
 
       <div>
-        <StocksBar
-          open={open}
-          companySymbol={companySymbol}
-        />
+        <StocksBar />
       </div>
 
       <div>

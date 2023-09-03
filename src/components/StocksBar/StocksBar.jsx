@@ -1,155 +1,194 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./StocksBar.scss";
 import StockItem from "../StockItem/StockItem";
 
-const StocksBar = ({
-  // open,
-  companySymbol,
-  // companySymbolData,
-  // setCompanySymbol,
-  // amznData,
-  // shopData,
-}) => {
-  // const apiKey = process.env.REACT_APP_STOCK_MARKET_API_KEY;
+const StocksBar = () =>
 
-  // let url =
-  //   "https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY_ADJUSTED&symbol=";
+  {
+    const apiKey = process.env.REACT_APP_STOCK_MARKET_API_KEY;
+    const [ibm, setIbm] = useState({});
+    const [aapl, setAapl] = useState({});
+    const [googl, setGoogl] = useState({});
+    const [amzn, setAmzn] = useState({});
+    const [nvda, setNvda] = useState({});
+    const [meta, setMeta] = useState({});
+    const [tsla, setTsla] = useState({});
+    const [msft, setMsft] = useState({});
+    const [jpm, setJpm] = useState({});
 
-  // switch (company) {
-  //   case "amzn":
-  //     url += `amzn&apikey=${apiKey}`;
-  //     break;
-  //   case "aapl":
-  //     url += `aapl&apikey=${apiKey}`;
-  //     break;
-  //   case "googl":
-  //     url += `googl&apikey=${apiKey}`;
-  //     break;
-  //   case "shop":
-  //     url += `shop&apikey=${apiKey}`;
-  //     break;
-  //   default:
-  //     url += `ibm&apikey=${apiKey}`;
-  //     break;
-  // }
+    const getIbm = async () => {
+      const url = `https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY_ADJUSTED&symbol=IBM&apikey=${apiKey}`;
+      const res = await fetch(url);
+      const data = await res.json();
+      setIbm(data);
+    };
 
-  // const getStockData = async (symbolResult) => {
-  //   try {
-  //     let url = `https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY_ADJUSTED&symbol=`;
+    const getAapl = async () => {
+      const url = `https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY_ADJUSTED&symbol=AAPL&apikey=${apiKey}`;
+      const res = await fetch(url);
+      const data = await res.json();
+      setAapl(data);
+    };
 
-  //     switch (company) {
-  //       case "amzn":
-  //         url += `amzn&apikey=${apiKey}`;
-  //         break;
-  //       case "aapl":
-  //         url += `aapl&apikey=${apiKey}`;
-  //         break;
-  //       case "googl":
-  //         url += `googl&apikey=${apiKey}`;
-  //         break;
-  //       case "shop":
-  //         url += `shop&apikey=${apiKey}`;
-  //         break;
-  //       default:
-  //         url += `ibm&apikey=${apiKey}`;
-  //         break;
-  //     }
+    const getGoogl = async () => {
+      const url = `https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY_ADJUSTED&symbol=GOOGL&apikey=${apiKey}`;
+      const res = await fetch(url);
+      const data = await res.json();
+      setGoogl(data);
+    };
+    const getAmzn = async () => {
+      const url = `https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY_ADJUSTED&symbol=AMZN&apikey=${apiKey}`;
+      const res = await fetch(url);
+      const data = await res.json();
+      setAmzn(data);
+    };
 
-  //     const res = await fetch(url);
-  //     if (!res.ok) {
-  //       throw new Error("Sorry something went wrong!");
-  //     }
+    const getNvda = async () => {
+      const url = `https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY_ADJUSTED&symbol=NVDA&apikey=${apiKey}`;
+      const res = await fetch(url);
+      const data = await res.json();
+      setNvda(data);
+    };
 
-  //     const data = await res.json();
+    const getMeta = async () => {
+      const url = `https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY_ADJUSTED&symbol=META&apikey=${apiKey}`;
+      const res = await fetch(url);
+      const data = await res.json();
+      setMeta(data);
+    };
 
-  //     setStockData(data);
-  //   } catch (e) {
-  //     alert(e.message);
-  //   }
-  // };
+    const getTsla = async () => {
+      const url = `https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY_ADJUSTED&symbol=TSLA&apikey=${apiKey}`;
+      const res = await fetch(url);
+      const data = await res.json();
+      setTsla(data);
+    };
 
-  // const amznOpen = (amznData) => {
-  //   const formattedData = [];
-  //   Object.values(amznData["Weekly Adjusted Time Series"]).map((value) =>
-  //     formattedData.push(value["1. open"])
-  //   );
-  //   return formattedData[0];
-  // };
-  // const amznOpenPrice = amznOpen(amznData)
+    const getMsft = async () => {
+      const url = `https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY_ADJUSTED&symbol=MSFT&apikey=${apiKey}`;
+      const res = await fetch(url);
+      const data = await res.json();
+      setMsft(data);
+    };
 
-  // const shopOpen = (shopData) => {
-  //   const formattedData = [];
-  //   Object.values(shopData["Weekly Adjusted Time Series"]).map((value) =>
-  //     formattedData.push(value["1. open"])
-  //   );
-  //   return formattedData[0];
-  // };
-  // const shopOpenPrice = shopOpen(shopData)
+    const getJpm = async () => {
+      const url = `https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY_ADJUSTED&symbol=JPM&apikey=${apiKey}`;
+      const res = await fetch(url);
+      const data = await res.json();
+      setJpm(data);
+    };
 
-  return (
-    <>
-      <div className="stocks-bar">
-        <StockItem
-          element="1"
-          // symbol="IBM"
-          // open={open}
-          companySymbol={companySymbol}
-          company="amzn"
-        />
-        <StockItem
-          element="2"
-          // symbol="GOOGL"
-          // open={open}
-          companySymbol={companySymbol}
-          company="aapl"
-        />
-        <StockItem
-          element="3"
-          // symbol="AMZN"
-          // open={open}
-          companySymbol={companySymbol}
-          company ="googl"
-        />
-        <StockItem
-          element="4"
-          // symbol="META"
-          // open={open}
-          companySymbol={companySymbol}
-          company="shop"
-        />
-        <StockItem
-          element="5"
-          // symbol="SHOP"
-          // open={open}
-          companySymbol={companySymbol}
-        />
-        {/* <StockItem
-          element="6"
-          // symbol="TSCO"
-          open={open}
-          companySymbol={companySymbol}
-        />
-        <StockItem
-          element="7"
-          // symbol="DAI"
-          open={open}
-          companySymbol={companySymbol}
-        />
-        <StockItem
-          element="8"
-          // symbol="AAPL"
-          open={open}
-          companySymbol={companySymbol}
-        />
-        <StockItem
-          element="1"
-          // symbol="MSFT"
-          open={open}
-          companySymbol={companySymbol}
-        /> */}
-      </div>
-    </>
-  );
-};
+    useEffect(() => {
+      getIbm();
+      getAapl();
+      getGoogl();
+      getAmzn();
+      getNvda();
+      getMeta();
+      getTsla();
+      getMsft();
+      getJpm();
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+
+    console.log(ibm);
+
+    const ibmOpen = (ibm) => {
+      const formattedData = [];
+      Object.values(aapl["Weekly Adjusted Time Series"]).map((value) =>
+        formattedData.push(value["1. open"])
+      );
+      return formattedData[0];
+    };
+    const ibmOpenPrice = ibmOpen(ibm);
+
+    const aaplOpen = (aapl) => {
+      const formattedData = [];
+      Object.values(aapl["Weekly Adjusted Time Series"]).map((value) =>
+        formattedData.push(value["1. open"])
+      );
+      return formattedData[0];
+    };
+    const aaplOpenPrice = aaplOpen(aapl);
+
+    const googlOpen = (googl) => {
+      const formattedData = [];
+      Object.values(googl["Weekly Adjusted Time Series"]).map((value) =>
+        formattedData.push(value["1. open"])
+      );
+      return formattedData[0];
+    };
+    const googlOpenPrice = googlOpen(googl);
+
+    const amznOpen = (amzn) => {
+      const formattedData = [];
+      Object.values(amzn["Weekly Adjusted Time Series"]).map((value) =>
+        formattedData.push(value["1. open"])
+      );
+      return formattedData[0];
+    };
+    const amznOpenPrice = amznOpen(amzn);
+
+    const nvdaOpen = (nvda) => {
+      const formattedData = [];
+      Object.values(nvda["Weekly Adjusted Time Series"]).map((value) =>
+        formattedData.push(value["1. open"])
+      );
+      return formattedData[0];
+    };
+    const nvdaOpenPrice = nvdaOpen(nvda);
+
+    const metaOpen = (meta) => {
+      const formattedData = [];
+      Object.values(meta["Weekly Adjusted Time Series"]).map((value) =>
+        formattedData.push(value["1. open"])
+      );
+      return formattedData[0];
+    };
+    const metaOpenPrice = metaOpen(meta);
+
+    const tslaOpen = (tsla) => {
+      const formattedData = [];
+      Object.values(tsla["Weekly Adjusted Time Series"]).map((value) =>
+        formattedData.push(value["1. open"])
+      );
+      return formattedData[0];
+    };
+    const tslaOpenPrice = tslaOpen(tsla);
+
+    const msftOpen = (msft) => {
+      const formattedData = [];
+      Object.values(msft["Weekly Adjusted Time Series"]).map((value) =>
+        formattedData.push(value["1. open"])
+      );
+      return formattedData[0];
+    };
+    const msftOpenPrice = msftOpen(msft);
+
+    const jpmOpen = (jpm) => {
+      const formattedData = [];
+      Object.values(jpm["Weekly Adjusted Time Series"]).map((value) =>
+        formattedData.push(value["1. open"])
+      );
+      return formattedData[0];
+    };
+    const jpmOpenPrice = jpmOpen(jpm);
+
+    return (
+      <>
+        <div className="stocks-bar">
+          <StockItem element="1" open={ibmOpenPrice} companySymbol="IBM" />
+          <StockItem element="2" open={aaplOpenPrice} companySymbol="AAPL" />
+          <StockItem element="3" open={googlOpenPrice} companySymbol="GOOGL" />
+          <StockItem element="4" open={amznOpenPrice} companySymbol="AMZN" />
+          <StockItem element="5" open={nvdaOpenPrice} companySymbol="NVDA" />
+          <StockItem element="6" open={metaOpenPrice} companySymbol="META" />
+          <StockItem element="7" open={tslaOpenPrice} companySymbol="TSLA" />
+          <StockItem element="8" open={msftOpenPrice} companySymbol="MSFT" />
+          <StockItem element="1" open={jpmOpenPrice} companySymbol="JPM" />
+        </div>
+      </>
+    );
+  };
 
 export default StocksBar;
