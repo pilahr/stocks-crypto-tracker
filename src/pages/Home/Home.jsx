@@ -17,7 +17,7 @@ const Home = () => {
         <div className="homepage__appPicture">
           <img
             className="homepage__appPicture--appPic"
-            src="https://ibb.co/dMn3Jh2"
+            src="https://i.ibb.co/jf7xZpM/6-F1-A7-D3-C-9-BB7-4-D8-F-874-D-1-F52942-BFC60.png"
             alt="tracker"
           />
         </div>
